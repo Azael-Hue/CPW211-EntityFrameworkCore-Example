@@ -21,7 +21,10 @@ namespace EntityFrameworkCore
             // Database = The desired name for the database
             // Server = The server we are connecting to. LocalDB is included with VS
             // Trusted_Connection - Indicates that our windows account should be used
-            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreExample;Trused_Connection=True;");
+            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreExample;Trusted_Connection=True;");
         }
+        
+        // Tell EF Core to track Students in the database
+        public DbSet<Student> Students { get; set; }
     }
 }
